@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.btn.second {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #0085FF;
+  color: #0085FF;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 900;
+  transition: 0.4s;
+}
+.btn.second:hover {
+  background-color: #0085FF;
+  color: #fff;
+  cursor: pointer;
+}
+.btn.main {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #FF3D00;
+  color: #FF3D00;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 900;
+  transition: 0.4s;
+}
+.btn.main:hover {
+  background-color: #FF3D00;
+  color: #fff;
+  cursor: pointer;
+}
+.btn.white {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 900;
+  transition: 0.4s;
+  background-color: transparent;
+}
+.btn.white:hover {
+  background-color: #fff;
+  color: #fff;
+  cursor: pointer;
+}
+.btn.white:hover {
+  color: #0085FF;
+}
+
+.wrapper .main .container .block:first-child, .wrapper .main .container, .wrapper header .contacts, .wrapper header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.logo.active {
+  color: #EF5DA8;
+}
+
+h1 {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 900;
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 900;
+}
+
+h3 {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 900;
+}
+
+h4 {
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+}
+p.context {
+  color: #939393;
+}
+
+.wrapper {
+  width: 1100px;
+  margin: 0 auto;
+}
+.wrapper header {
+  padding: 36px 0;
+}
+.wrapper header .burger-menu .line {
+  width: 20px;
+  background-color: #202020;
+  height: 2px;
+}
+.wrapper header .burger-menu .line:not(:last-child) {
+  margin-bottom: 5px;
+}
+.wrapper header .contacts svg:first-child {
+  margin-right: 20px;
+}
+.wrapper header .contacts svg:first-child path {
+  fill: transparent;
+}
+.wrapper header .contacts svg path {
+  transition: 0.4s;
+  stroke: #202020;
+  fill: #202020;
+}
+.wrapper header .contacts svg path:hover {
+  stroke: #FF3D00;
+  fill: #FF3D00;
+  cursor: pointer;
+}
+.wrapper .main .container {
+  width: 100%;
+}
+.wrapper .main .container .block {
+  width: 39%;
+  border-radius: 8px;
+}
+.wrapper .main .container .block:first-child {
+  padding: 3% 5%;
+  background-color: #0085FF;
+  flex-direction: column;
+}
+.wrapper .main .container .block h1 {
+  color: #fff;
+}
+.wrapper .main .container .block h1:first-child {
+  margin-bottom: 20px;
+}
+.wrapper .main .container .block .cover {
+  position: relative;
+  width: 100%;
+  padding-top: 70%;
+}
+.wrapper .main .container .block .cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
