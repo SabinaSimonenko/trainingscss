@@ -6,174 +6,358 @@
   outline: none;
   background-color: transparent;
 }
-
-.btn.second {
-  width: 100%;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #0085FF;
-  color: #0085FF;
-  border-radius: 5px;
-  font-family: "Montserrat";
-  font-size: 14px;
-  font-weight: 900;
-  transition: 0.4s;
-}
-.btn.second:hover {
-  background-color: #0085FF;
-  color: #fff;
-  cursor: pointer;
-}
-.btn.main {
-  width: 100%;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #FF3D00;
-  color: #FF3D00;
-  border-radius: 5px;
-  font-family: "Montserrat";
-  font-size: 14px;
-  font-weight: 900;
-  transition: 0.4s;
-}
-.btn.main:hover {
-  background-color: #FF3D00;
-  color: #fff;
-  cursor: pointer;
-}
-.btn.white {
-  width: 100%;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #fff;
-  color: #fff;
-  border-radius: 5px;
-  font-family: "Montserrat";
-  font-size: 14px;
-  font-weight: 900;
-  transition: 0.4s;
-  background-color: transparent;
-}
-.btn.white:hover {
-  background-color: #fff;
-  color: #fff;
-  cursor: pointer;
-}
-.btn.white:hover {
-  color: #0085FF;
+* textarea {
+  width: fit-content;
 }
 
-.wrapper .main .container .block:first-child, .wrapper .main .container, .wrapper header .contacts, .wrapper header {
+.wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+.page-title, .payment .container .text-container, .payment .container, .order .wrapper form input[type=text],
+.order .wrapper form .select-title,
+.order .wrapper form textarea, .order .wrapper .container, .category .wrapper .container, .main .wrapper, header .wrapper .nav-menu nav,
+header .wrapper .nav-menu .icons, header .wrapper .nav-menu, header .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo {
-  font-family: "Montserrat";
-  font-size: 24px;
-  font-weight: 900;
-  cursor: pointer;
+header {
+  padding: 24px 0;
+  color: #202020;
 }
-.logo.active {
-  color: #EF5DA8;
+header .wrapper .nav-menu nav,
+header .wrapper .nav-menu .icons {
+  gap: 20px;
 }
-
-h1 {
-  font-family: "Montserrat";
-  font-size: 20px;
-  font-weight: 900;
+header .wrapper .nav-menu nav {
+  padding-right: 20px;
+  border-right: 1px solid #939393;
 }
-
-h2 {
-  font-family: "Montserrat";
-  font-size: 16px;
-  font-weight: 900;
-}
-
-h3 {
+header .wrapper .nav-menu nav a {
   font-family: "Montserrat";
   font-size: 14px;
-  font-weight: 900;
-}
-
-h4 {
-  font-family: "Montserrat";
-  font-size: 12px;
-  font-weight: 700;
-}
-
-p {
-  font-family: "Montserrat";
-  font-size: 14px;
-  font-weight: 400;
-}
-p.context {
-  color: #939393;
-}
-
-.wrapper {
-  width: 1100px;
-  margin: 0 auto;
-}
-.wrapper header {
-  padding: 36px 0;
-}
-.wrapper header .burger-menu .line {
-  width: 20px;
-  background-color: #202020;
-  height: 2px;
-}
-.wrapper header .burger-menu .line:not(:last-child) {
-  margin-bottom: 5px;
-}
-.wrapper header .contacts svg:first-child {
-  margin-right: 20px;
-}
-.wrapper header .contacts svg:first-child path {
-  fill: transparent;
-}
-.wrapper header .contacts svg path {
+  font-weight: 500;
+  color: #202020;
   transition: 0.4s;
-  stroke: #202020;
-  fill: #202020;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
-.wrapper header .contacts svg path:hover {
-  stroke: #FF3D00;
+header .wrapper .nav-menu nav a:hover {
+  color: #FF3D00;
+}
+header .wrapper .nav-menu .icons {
+  padding-left: 20px;
+}
+header .wrapper .nav-menu .icons svg {
+  fill: #202020;
+  transition: 0.4s;
+}
+header .wrapper .nav-menu .icons svg:hover {
   fill: #FF3D00;
   cursor: pointer;
 }
-.wrapper .main .container {
-  width: 100%;
+
+.main {
+  background-color: #FF3D00;
 }
-.wrapper .main .container .block {
-  width: 39%;
-  border-radius: 8px;
+.main .wrapper .title,
+.main .wrapper .img-block {
+  width: 48%;
 }
-.wrapper .main .container .block:first-child {
-  padding: 3% 5%;
-  background-color: #0085FF;
-  flex-direction: column;
-}
-.wrapper .main .container .block h1 {
+.main .wrapper .title h1 {
+  font-family: "Montserrat";
+  font-size: 56px;
+  font-weight: 900;
+  font-family: "Permanent Marker";
   color: #fff;
+  margin-bottom: 30px;
 }
-.wrapper .main .container .block h1:first-child {
-  margin-bottom: 20px;
+.main .wrapper .title .btn {
+  padding: 10px 16px;
+  background-color: #fff;
+  color: #202020;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+  transition: 0.4s;
+  text-transform: uppercase;
 }
-.wrapper .main .container .block .cover {
+.main .wrapper .title .btn:hover {
+  box-shadow: 0 0 6px 4px rgba(32, 32, 32, 0.15);
+  font-weight: 700;
+  cursor: pointer;
+}
+.main .wrapper .cover {
   position: relative;
   width: 100%;
-  padding-top: 70%;
+  padding-top: 100%;
 }
-.wrapper .main .container .block .cover img {
+.main .wrapper .cover img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
   object-fit: cover;
+}
+.main .wrapper .cover img {
+  transform: scaleX(-1);
+}
+
+.category .wrapper .container:first-child {
+  margin-bottom: 2%;
+}
+.category .wrapper .container .card {
+  width: 32%;
+}
+.category .wrapper .container .card:hover {
+  cursor: pointer;
+}
+.category .wrapper .container .card:hover h3 {
+  transition: 0.4s;
+  background-color: #FF3D00;
+}
+.category .wrapper .container .card.big {
+  width: 66%;
+}
+.category .wrapper .container .card.big .cover {
+  position: relative;
+  width: 100%;
+  padding-top: 48.5%;
+}
+.category .wrapper .container .card.big .cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.category .wrapper .container .cover {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+.category .wrapper .container .cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.category .wrapper .container .cover h3 {
+  background-color: transparent;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.4s;
+}
+
+.order .wrapper .container {
+  flex-direction: column;
+}
+.order .wrapper .container span {
+  width: 96%;
+  padding: 2%;
+  background-color: lightgrey;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.order .wrapper .container span a {
+  font-weight: 500;
+  color: #202020;
+}
+.order .wrapper form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 20px;
+  width: 100%;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+}
+.order .wrapper form h3 {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 700;
+}
+.order .wrapper form input[type=text],
+.order .wrapper form .select-title,
+.order .wrapper form textarea {
+  width: 100%;
+  padding: 2% 0;
+  border-bottom: 1px solid #939393;
+  color: #202020;
+  resize: none;
+}
+.order .wrapper form input[type=text]::placeholder,
+.order .wrapper form .select-title::placeholder,
+.order .wrapper form textarea::placeholder {
+  color: #202020;
+}
+.order .wrapper form .textarea-container {
+  width: 100%;
+}
+.order .wrapper form .textarea-container textarea {
+  overflow: hidden;
+  height: 80px;
+  display: block;
+}
+
+.payment .container {
+  align-items: start;
+}
+.payment .container h3 {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.payment .container h4 {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 700;
+}
+.payment .container p {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+  color: #939393;
+}
+.payment .container .check, .payment .container .payment-confirm {
+  width: 48%;
+}
+.payment .container .text-container {
+  border-bottom: 1px solid lightgrey;
+  padding: 15px 0;
+}
+.payment .container .text-container:last-child {
+  border-bottom: none;
+}
+.payment .container .text-container:nth-child(2) {
+  padding: 0 0 15px;
+}
+.payment .container .payment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 2px 10px 2px rgba(32, 32, 32, 0.1);
+  width: 94%;
+  padding: 3%;
+}
+.payment .container .btn-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.payment .container .btn {
+  padding: 10px 16px;
+  background-color: #FF3D00;
+  color: #fff;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+  transition: 0.4s;
+  text-transform: uppercase;
+}
+.payment .container .btn:hover {
+  box-shadow: 0 0 6px 4px rgba(32, 32, 32, 0.15);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logo {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #202020;
+  display: flex;
+  align-items: baseline;
+  transition: 0.4s;
+}
+.logo:hover {
+  text-shadow: 0 0 6px rgba(255, 61, 0, 0.4);
+  color: #fff;
+}
+.logo .circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #FF3D00;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+}
+label .checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #939393;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+label .checkbox svg {
+  display: none;
+}
+label .checkbox.active svg {
+  display: block;
+  fill: #FF3D00;
+  width: 16px;
+  height: 16px;
+}
+
+.page-title {
+  background-color: #FF3D00;
+  flex-direction: column;
+  padding: 50px 0;
+  color: #fff;
+}
+.page-title a {
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.4s;
+}
+.page-title a:hover {
+  color: #202020;
+}
+.page-title h2 {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&amp;family=Open+Sans:wght@300;700;800&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <a href="#">
+                <div class="logo">
+                    AROTY
+                    <div class="circle"></div>
+                </div>
+            </a>
+            <div class="nav-menu">
+                <nav>
+                    <a href="../../index.html"> Главная</a>
+                    <a href="product.html"> Товар</a>
+                    <a href="basket.html"> Корзина </a>
+                    <a href="#"> заказ</a>
+                </nav>
+                <div class="icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32L83.9 463.5C91 492 116.6 512 146 512H430c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32H458.4L365.3 12.9C359.2 1.2 344.7-3.4 332.9 2.7s-16.3 20.6-10.2 32.4L404.3 192H171.7L253.3 35.1zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="page-title">
+        <h2>checkout cart</h2>
+        <div class="links">
+            <a href="#">Home</a>
+            <span>/</span>
+            <a href="#">Order</a>
+        </div>
+    </section>
+    <section class="order">
+        <div class="wrapper">
+            <div class="container">
+                <span> Returning customer? <a href="#">Click here to login</a></span>
+                <span>Have a coupon?<a href = "#">  Click here to enter your code</a></span>
+            </div>
+            <form action="">
+                <h3>Billing Details</h3>
+                <input type="text" placeholder="Company Name">
+                <div class="select" onclick="document.querySelector('.select').classList.toggle('active')">
+                    <div class="select-title">
+                        Country
+                        <svg width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.5 6L0.0358982 0L6.9641 0L3.5 6Z" fill="#202020"/>
+                        </svg>
+                    </div>
+                </div>
+                <input type="text" placeholder="Street Address">
+                <input type="text" placeholder="Phone" >
+                <input type="text" placeholder="Email Address">
+                <label for="newAccount">
+                    <input type="checkbox" name="" id="newAccount" hidden>
+                    <div class="checkbox" onclick="this.classList.toggle('active')">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                    </div>
+                    <span>Create an acoount?</span>
+                </label>
+                <div class="textarea-container">
+                    <p>Describe your order</p>
+                    <textarea name="" id=""></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="payment">
+        <div class="wrapper">
+            <div class="container">
+                <div class="check">
+                    <h3>Ваш заказ</h3>
+                    <div class="text-container">
+                        <h4>Product</h4>
+                        <h4>Total</h4>
+                    </div>
+                    <div class="text-container">
+                        <p>Футболка оверсайз</p>
+                        <p>$45.00</p>
+                    </div>
+                    <div class="text-container">
+                        <p>Футболка оверсайз</p>
+                        <p>$45.00</p>
+                    </div>
+                    <div class="text-container">
+                        <p>Футболка оверсайз</p>
+                        <p>$45.00</p>
+                    </div>
+                    <div class="text-container">
+                        <h4>Total</h4>
+                        <h4>$165.00</h4>
+                    </div>
+                </div>
+                <div class="payment-confirm">
+                    <h3>Payment</h3>
+                    <div class="payment-card">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem dolore, ipsam earum modi explicabo impedit ratione voluptatum incidunt? Quibusdam recusandae esse cum harum placeat atque eos dolor error quas unde?</p>
+                        <label for="qiwi">
+                            <input type="checkbox" name="" id="qiwi" hidden>
+                            <div class="checkbox" onclick="this.classList.toggle('active')">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                            </div>
+                            <span>qiwi</span>
+                        </label>
+                        <label for="paypal">
+                            <input type="checkbox" name="" id="paypal" hidden>
+                            <div class="checkbox" onclick="this.classList.toggle('active')">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                            </div>
+                            <span>paypal</span>
+                        </label>
+                        <label for="visa">
+                            <input type="checkbox" name="" id="visa" hidden>
+                            <div class="checkbox" onclick="this.classList.toggle('active')">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                            </div>
+                            <span>visa</span>
+                        </label>
+                    </div>
+                    <div class="btn-container">
+                        <input type="button" value="Заказать" class="btn">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

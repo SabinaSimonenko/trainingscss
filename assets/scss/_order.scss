@@ -1,0 +1,112 @@
+.order {
+    .wrapper {
+        .container {
+            @extend %container;
+            flex-direction: column;
+
+            span {
+                width: 96%;
+                padding: 2%;
+                background-color: $lightGrey;
+                border-radius: 5px;
+                @include font(16px, 400);
+                margin-bottom: 10px;
+
+                a {
+                    font-weight: 500;
+                    color: $black;
+                }
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            gap: 20px;
+            width: 100%;
+            @include font(14px, 400);
+
+            h3 {
+                @include font(20px, 700);
+            }
+
+            input[type=text],
+            .select-title,
+            textarea {
+                width: 100%;
+                padding: 2% 0;
+                border-bottom: 1px solid $context;
+
+                @extend %container;
+                color: $black;
+                resize: none;
+
+                &::placeholder {
+                    color: #202020;
+                }
+            }
+
+            .textarea-container {
+                width: 100%;
+
+                textarea {
+                    overflow: hidden;
+                    height: 80px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.payment {
+    .container {
+        @extend %container;
+        align-items: start;
+        h3 {
+            @include font(18px, 700);
+            margin-bottom: 30px
+        }
+
+        h4 {
+            @include font(16px, 700)
+        }
+        p{
+            @include font(14px,400);
+            color: $context;
+        }
+        .check, .payment-confirm {
+            width: 48%;
+        }
+
+        .text-container {
+            @extend %container;
+            border-bottom: 1px solid $lightGrey;
+            padding: 15px 0;
+            &:last-child{
+                border-bottom: none;
+            }
+            &:nth-child(2){
+                padding: 0 0 15px;
+            }
+        }
+        .payment-card{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            box-shadow: 0 2px 10px 2px rgba($color: $black, $alpha: 0.1);
+            width: 94%;
+            padding: 3%;
+        }
+        .btn-container{
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .btn{
+            @include btn($white,$main)
+        }
+    }
+
+}

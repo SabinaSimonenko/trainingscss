@@ -1,0 +1,66 @@
+.logo {
+    @include font(24px, 700);
+    cursor: pointer;
+    color: $black;
+    display: flex;
+    align-items: baseline;
+    transition: 0.4s;
+
+    &:hover {
+        text-shadow: 0 0 6px rgba($color: $main, $alpha: 0.4);
+        color: $white;
+    }
+
+    .circle {
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        background-color: $main;
+    }
+}
+label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include font(14px,400);
+    .checkbox{
+        width: 20px;
+        height: 20px;
+        border: 1px solid $context;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        svg{
+            display: none;
+        }
+        &.active{
+            svg{
+                display: block;
+                fill: $main;
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
+.page-title{
+    background-color: $main;
+    @extend %container;
+    flex-direction: column;
+    padding: 50px 0;
+    color: $white;
+    a{
+        color: $white;
+        @include font(16px,500);
+        transition: 0.4s;
+        &:hover{
+            color: $black;
+        }
+    }
+    h2{
+        text-transform: uppercase;
+        @include font(24px , 700)
+    }
+}

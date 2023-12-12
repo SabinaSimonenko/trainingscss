@@ -3,156 +3,194 @@
 // переменная - контейнер (ящик) для значения
 $black: #202020;
 $white: #fff;
-$second: #0085FF;
-$main:#FF3D00;
-$logo: #EF5DA8;
-$context:#939393;
+$main: #FF3D00;
+$context: #939393;
+$bgCard: #d1c599;
+$lightGrey: lightgrey;
 
-
-@mixin font($size, $weight){
+@mixin font($size, $weight) {
     font-family: 'Montserrat';
     font-size: $size;
     font-weight: $weight;
 }
-@mixin btn($color){
-    width: 100%;
-    padding: 10px;
-    background-color: $white;
-    border: 1px solid $color;
+
+@mixin btn($color, $bgcolor) {
+    padding: 10px 16px;
+    background-color: $bgcolor;
     color: $color;
     border-radius: 5px;
-    @include font(14px,900);
+    @include font(14px, 400);
     transition: 0.4s;
-    &:hover{
-        background-color: $color;
-        color: $white;
+    text-transform: uppercase;
+
+    &:hover {
+        box-shadow: 0 0 6px 4px rgba($color: $black, $alpha: 0.15);
+        font-weight: 700;
         cursor: pointer;
     }
 }
-@mixin cover($height){
+
+@mixin cover($height) {
     position: relative;
     width: 100%;
     padding-top: $height;
-    img{
+
+    img {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        border-radius: 8px;
         object-fit: cover;
     }
 }
-.btn{
-    &.second{
-        @include btn($second);
-    }
-    &.main{
-        @include btn($main);
-    }
-    &.white{
-        @include btn($white);
-        background-color: transparent;
-        &:hover{
-            color: $second;
-        }
-    }
+
+.wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
 }
-%container{
+
+section {
+    margin-bottom: 80px;
+}
+
+%container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.logo{
-    @include font(24px,900);
-    cursor: pointer;
-    &.active{
-        color: $logo;
-    }
-}
-h1{
-    @include font(20px,900 );
-}
-h2{
-    @include font(16px,900 );
-}
-h3{
-    @include font(14px,900 );
-}
-h4{
-    @include font(12px,700 )
-}
-p{
-    @include font(14px,400 );
-    &.context{
-        color:$context ;
-    }
-}
 
-.wrapper{
-    width: 1100px;
-    margin: 0 auto;
 
-    header{
-       padding: 36px 0;
-       @extend %container;
-    .burger-menu{
-        .line{
-            width: 20px;
-            background-color: $black;
-            height: 2px;
-            &:not(:last-child){
-                margin-bottom: 5px;
-            }
-        }
-    }
-    .contacts{
+header {
+    padding: 24px 0;
+    color: $black;
+
+    .wrapper {
         @extend %container;
-        svg{
-            &:first-child{
-                margin-right: 20px;
-                path{
-                    fill: transparent;
-                }
-            }
-            path{
-                transition: 0.4s;
-                stroke: $black;
-                fill: $black;
-                
-                &:hover{
-                    stroke: $main;
-                    fill: $main;
-                    cursor: pointer;
-                }
-            }  
-        }
-    }
-    }
 
-    .main{
-        .container{
+        .nav-menu {
             @extend %container;
-            width: 100%;
-            .block{
-                width: 39%;
-                border-radius: 8px;
-                &:first-child{
-                    padding: 3% 5%;
-                    background-color: $second;
-                    @extend %container;
-                    flex-direction: column;
-                }
-                h1{
-                    color: $white;
-                    &:first-child{
-                        margin-bottom: 20px;
+
+            nav,
+            .icons {
+                @extend %container;
+                gap: 20px;
+            }
+
+            nav {
+                padding-right: 20px;
+                border-right: 1px solid $context;
+
+                a {
+                    @include font(14px, 500);
+                    color: $black;
+                    transition: 0.4s;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+
+                    &:hover {
+                        color: $main;
                     }
                 }
-                .cover{
-                    @include cover(70%);
+            }
+
+            .icons {
+                padding-left: 20px;
+
+                svg {
+                    fill: $black;
+                    transition: 0.4s;
+
+                    &:hover {
+                        fill: $main;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.main {
+    background-color: $main;
+
+    .wrapper {
+        @extend %container;
+
+        .title,
+        .img-block {
+            width: 48%;
+        }
+
+        .title {
+            h1 {
+                @include font(56px, 900);
+                font-family: 'Permanent Marker';
+                color: $white;
+                margin-bottom: 30px;
+            }
+
+            .btn {
+                @include btn($black, $white);
+            }
+        }
+
+        .cover {
+            @include cover(100%);
+
+            img {
+                transform: scaleX(-1);
+            }
+        }
+    }
+}
+
+.category {
+    .wrapper {
+        .container {
+            @extend %container;
+            &:first-child{
+                margin-bottom: 2%;
+            }
+
+            .card {
+                width: 32%;
+                &:hover{
+                    cursor: pointer;
+                    h3{
+                        transition: 0.4s;
+                        background-color: $main;
+                    }
+                }
+                &.big {
+                    width: 66%;
+                    
+                    .cover {
+                        @include cover(48.5%);  
+                    }
+                }
+            }
+            
+            .cover {
+                @include cover(100%);
+                h3 {
+                    background-color: transparent;
+                    position: absolute;
+                    top: 45%;
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                    text-transform: uppercase;
+                    z-index: 1;
+                    color: $white;
+                    @include font(18px,700);
+                    transition: 0.4s;
                 }
             }
         }
     }
 }
+
+@import 'order';
+@import 'repeats';
